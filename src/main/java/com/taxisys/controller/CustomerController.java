@@ -12,7 +12,7 @@ import com.taxisys.dao.CustomerDAO;
 import com.taxisys.enity.Customer;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("localhost://3000/")
 public class CustomerController {
 
 	@Autowired
