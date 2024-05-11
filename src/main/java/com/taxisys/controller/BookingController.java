@@ -14,7 +14,7 @@ import com.taxisys.dao.BookingDAO;
 import com.taxisys.enity.Booking;
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("localhost://3000/")
 public class BookingController {
 
 	@Autowired
