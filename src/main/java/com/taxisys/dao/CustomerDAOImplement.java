@@ -29,8 +29,8 @@ public class CustomerDAOImplement implements CustomerDAO{
 	@Override
 	public List<Integer> findAllCustomerIds() {
 		Query q = entityManager.createQuery("SELECT c.customerId FROM Customer c");
-		List<Integer> list = q.getResultList();
-		return list;
+		
+		return  q.getResultList();
 
 	}
 
