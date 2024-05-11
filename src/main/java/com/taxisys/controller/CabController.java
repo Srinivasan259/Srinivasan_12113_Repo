@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.taxisys.dao.CabDAO;
 import com.taxisys.enity.Cab;
 
-import jakarta.annotation.security.PermitAll;
+
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin("localhost://3000/")
 public class CabController {
 	
 	@Autowired
