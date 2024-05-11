@@ -38,8 +38,8 @@ public class CabDAOImplement implements CabDAO{
 	public List<Cab> findCabPickup(String pickupLocation) {
 		Query query1 = entityManager.createQuery("select c from Cab c where LOWER (pickupLocation) LIKE CONCAT('%',:plocation,'%')");
 		query1.setParameter("plocation", pickupLocation);
-		List<Cab> list1 = query1.getResultList();
-		return list1;
+		 
+		return query1.getResultList();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -47,8 +47,8 @@ public class CabDAOImplement implements CabDAO{
 	public List<Cab> findCabDrop(String dropLocation) {
 		Query query2 = entityManager.createQuery("select c from Cab c where LOWER (dropLocation) LIKE CONCAT('%',:dlocation,'%')");
 		query2.setParameter("dlocation", dropLocation);
-		List<Cab> list2 = query2.getResultList();
-		return list2;
+		
+		return query2.getResultList();
 	}
 
 	@Override
@@ -61,8 +61,8 @@ public class CabDAOImplement implements CabDAO{
 	@Override
 	public List<Integer> findAllCabIds() {
 		Query q = entityManager.createQuery("SELECT c.cabId FROM Cab c");
-		List<Integer> list = q.getResultList();
-		return list;
+		
+		return  q.getResultList();
 	}
 
 }
